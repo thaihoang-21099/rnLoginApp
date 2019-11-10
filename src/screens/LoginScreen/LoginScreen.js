@@ -25,7 +25,6 @@ class LoginScreen extends React.Component {
     render() {
         const { isFocus } = this.state
         return (
-            //<React.Fragment>
             <KeyboardAvoidingView style={{ flex: 1 }} behavior="padding" enabled>
                 <SafeAreaView style={styles.container}>
                     <ViewNative background>
@@ -41,7 +40,7 @@ class LoginScreen extends React.Component {
                             <Logo />
                             <ViewNative input >
                                 <Image style={styles.iconInput} source={Images.ICON_PHONE} />
-                                <TextInput placeholder="Nhập số điện thoại/email"></TextInput>
+                                <TextInput  placeholder="Nhập số điện thoại/email"></TextInput>
                             </ViewNative>
                             <ViewNative input >
                                 <Image style={styles.iconInput} source={Images.ICON_PHONE} />
@@ -54,20 +53,18 @@ class LoginScreen extends React.Component {
                         </View>
                         <View style={styles.blockDown}>
                             <Button style={{ backgroundColor: '#0028a5' }} socialLogin>
-                                <Image style={{width:30,height:30}} source={Images.ICON_FB}/>
+                                <Image style={styles.iconSocial} source={Images.ICON_FB}/>
                                 <Text>Login by Facebook</Text>
                             </Button>
                             <Button socialLogin>
-                                <Image style={{width:30,height:30}} source={Images.ICON_GMAIL}/>
+                                <Image style={styles.iconSocial} source={Images.ICON_GMAIL}/>
                                 <Text>Login by Google</Text>
                             </Button>
                             <Text style={{color:'black', marginTop:35}}>Bạn chưa có tài khoản? <Text style={{color:'red'}}>Đăng ký ngay</Text></Text>
                         </View>
-
                     </View>
                 </SafeAreaView>
             </KeyboardAvoidingView>
-            //–</React.Fragment>
         )
     }
 }

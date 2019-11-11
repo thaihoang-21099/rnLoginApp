@@ -32,9 +32,13 @@ export default {
   backgroundWhite:"#FFF", 
   backgroundGray:"#f7f7f7",
 
+
   //TEXT
-  textGray:"#a7a7a7",
+  textGrayLight:"#a7a7a7",
+  textGrayStrong:"#767676",
   textWhite:"#FFF",
+  textBlueStrong:"#0028a5",
+  textBlueLight:"#3c5fcc",
 
   //Button
   buttonRed:"#f31b1c",
@@ -42,6 +46,12 @@ export default {
 
   //Boder
   borderGray:'#d3d3d3',
+  borderGrayLight:'#c7c7c7',
+  borderRed:'#f31b1c',
+
+  //Checkbox
+  checkboxBackgroundRed:'#f31b1c',
+  checkboxBackgroundWhite:'#FFF',
 
 
 //////////-- IT's mine ---/////////////////////

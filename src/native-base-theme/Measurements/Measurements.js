@@ -29,7 +29,7 @@ const Measurements = {
   mediumPadding:15,
   doubleMediumPadding:30,
   doubleBasePadding: 20,
-  smallMargin: 5,
+  smallPadding: 5,
   //other
   doubleSection: 50,
   horizontalLineHeight: 1,
@@ -64,7 +64,7 @@ const Measurements = {
   border:{
     tiny:0.25,
     regular:1
-  }
+  },
 };
 
 export default Measurements;

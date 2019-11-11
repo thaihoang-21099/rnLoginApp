@@ -1,3 +1,4 @@
+/* eslint-disable no-alert, no-console */
 import React from 'react';
 
 import { View, StyleSheet, Image, TextInput, SafeAreaView, KeyboardAvoidingView } from 'react-native';
@@ -18,6 +19,10 @@ class LoginScreen extends React.Component {
         this.state = {
             isFocus: false
         }
+    }
+
+    onLogin = ()=>{
+        this.props.navigation.navigate('RegisterScreen1');
     }
 
     handlerFocus = () => {
@@ -51,13 +56,14 @@ class LoginScreen extends React.Component {
                             <View style={{ alignItems: 'flex-end', marginBottom: 20 }}>
                                 <Text note>{I18N.t('TEXT_FORGOT_PASSWORD')}</Text>
                             </View>
-                            <Button login><Text>{I18N.t('TEXT_LOGIN')}</Text></Button>
+                            <Button login onPress={this.onLogin}><Text>{I18N.t('TEXT_LOGIN')}</Text></Button>
                         </View>
                         <View style={styles.blockDown}>
                             <Button style={{ backgroundColor: '#0028a5' }} socialLogin>
                                 <Image style={styles.iconSocial} source={Images.ICON_FB}/>
                                 <Text>{I18N.t('TEXT_LOGIN_FB')}</Text>
                             </Button>
+                        
                             <Button socialLogin>
                                 <Image style={styles.iconSocial} source={Images.ICON_GMAIL}/>
                                 <Text>{I18N.t('TEXT_LOGIN_GG')}</Text>

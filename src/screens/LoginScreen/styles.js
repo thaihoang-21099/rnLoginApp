@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     containerInner: {
         flex: 1,
         width: '80%',
-        marginTop: Measurements.doubleBaseMargin * 2,
+        marginTop: Measurements.doubleBaseMargin * 2+5,
     },
     blockTop: {
         width: '100%',

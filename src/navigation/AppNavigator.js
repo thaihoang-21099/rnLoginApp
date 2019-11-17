@@ -3,65 +3,34 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import SplashScreen from '../screens/SplashSceen';
 import LoginScreen from '../screens/LoginScreen';
-import RegisterScreen1 from '../screens/RegisterScreen/Screen1';
-import RegisterScreen2 from '../screens/RegisterScreen/Screen2';
-import RegisterScreen3 from '../screens/RegisterScreen/Screen3';
+// import RegisterScreen1 from '../screens/RegisterScreen/Screen1';
+// import RegisterScreen2 from '../screens/RegisterScreen/Screen2';
+// import RegisterScreen3 from '../screens/RegisterScreen/Screen3';
+// import RegisterScreen4 from '../screens/RegisterScreen/Screen4';
+// import RegisterScreen6 from '../screens/RegisterScreen/Screen6';
 
+import RegisterNavigator from './RegisterNavigator';
 
 import Colors from '../native-base-theme/Color';
 
 const AppNavigator = createStackNavigator({
     SplashScreen: {
         screen: SplashScreen,
-        navigationOptions: {
-            header: null
-        }
+
     },
     LoginScreen: {
         screen: LoginScreen,
-        navigationOptions: {
-            header: null
-        }
+
     },
-    RegisterScreen1: {
-        screen: RegisterScreen1,
-        navigationOptions: {
-            title: 'Dang ky dich vu',
-            headerStyle: {
-                backgroundColor: Colors.BG_RED,
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-            fontWeight: 'bold',
-            },
-        }
+    RegisterScreen: {
+        screen: RegisterNavigator,
+
     },
-    RegisterScreen2: {
-        screen: RegisterScreen2,
-        navigationOptions: {
-            title: 'Dang ky dich vu',
-            headerStyle: {
-                backgroundColor: Colors.BG_RED,
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-            fontWeight: 'bold',
-            },
-        }
-    },
-    RegisterScreen3: {
-        screen: RegisterScreen3,
-        navigationOptions: {
-            title: 'Dang ky dich vu',
-            headerStyle: {
-                backgroundColor: Colors.BG_RED,
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-            fontWeight: 'bold',
-            },
-        }
-    },
+
+},{
+    defaultNavigationOptions:{
+        header:null
+    }
 })
 
 export default createAppContainer(AppNavigator);

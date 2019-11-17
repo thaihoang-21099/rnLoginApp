@@ -7,12 +7,13 @@ const styles = StyleSheet.create({
     },
     containerInner:{
         flex:1,
-        paddingLeft:Measurements.basePadding,
+        paddingLeft:Measurements.mediumPadding,
         marginTop:Measurements.doubleBasePadding
     },
     button:{
-        marginTop:Measurements.doubleBaseMargin,
-        marginRight:Measurements.baseMargin
+        marginTop:Measurements.doubleBaseMargin+5,
+        marginRight:Measurements.doubleBaseMargin+5,
+        marginLeft:Measurements.baseMargin
     }
 })
 export default styles;

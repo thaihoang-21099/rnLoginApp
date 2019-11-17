@@ -1,32 +1,50 @@
 import React from 'react';
 
-import {StyleSheet,TextInput} from 'react-native';
-
-import {View,Text,Button} from 'native-base';
+import { View, Text, Button } from 'native-base';
 
 //Components
 import InputField from '../../../component/InputField';
+import BaseComponent from '../../../component/BaseComponent';
 
 //Style
 import styles from './styles';
 
-class Screen1 extends React.Component{
+import { getLanguages } from 'react-native-i18n';
 
-    onLogin=()=>{
+
+
+class Screen1 extends BaseComponent {
+    state = {
+        username: '',
+        email: ''
+    }
+    onLogin = () => {
         this.props.navigation.navigate('RegisterScreen2')
     }
-    render(){
-        return(
+
+    onChangeText = (name, value) => {
+        this.setState({
+            [name]: value
+        })
+    }
+
+    alert=()=>{
+        getLanguages().then(l=>console.log(l))
+    }
+
+    render() {
+        return (
             <View style={styles.container}>
                 <View style={styles.containerInner}>
-                    <Text title>1. THONG TIN CA NHAN</Text>
-                    <InputField text='Họ tên' placeholder='Tên liên hệ' isRequired/>
-                    <InputField text='Email' placeholder='Email' isRequired/>
-                    <InputField text='Mật khẩu' placeholder='Nhập mật khẩu' isRequired/>
-                    <InputField text='Nhập lại mật khẩu' placeholder='Nhập mật khẩu' isRequired/>
-                    <InputField text='Địa chỉ' placeholder='Số nhà/ đường' isRequired/>
-                    <InputField text='Thành phố' isRequired/>
-                    <Button onPress={this.onLogin} style={styles.button} login><Text>DANG NHAP</Text></Button>
+                    <Text title>1. {this.getString('TITLE_PERSONAL_INFO')}</Text>
+                    <InputField text={this.getString('USERNAME')} onChangeText={this.onChangeText} name='username' placeholder={this.getString('USERNAME_DETAIL')} isRequired />
+                    <InputField text={this.getString('EMAIL')} onChangeText={this.onChangeText} name='email' placeholder={this.getString('EMAIL_DETAIL')} isRequired />
+                    <InputField text={this.getString('PASSWORD')} placeholder={this.getString('PASSWORD_DETAIL')} isRequired />
+                    <InputField text={this.getString('PASSWORD_CONFIRM')} placeholder={this.getString('PASSWORD_CONFIRM_DETAIL')} isRequired />
+                    <InputField text={this.getString('ADDRESS')} placeholder={this.getString('ADDRESS_DETAIL')} isRequired />
+                    <InputField text={this.getString('CITY')} isRequired />
+                    <Button onPress={this.onLogin} style={styles.button} login><Text>{this.getString('CONFIRM')}</Text></Button>
+                    {this.alert()}
                 </View>
             </View>
         )

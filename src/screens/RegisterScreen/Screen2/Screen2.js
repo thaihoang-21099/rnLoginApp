@@ -1,26 +1,39 @@
 import React from 'react';
 
-import {StyleSheet,TextInput} from 'react-native';
+import { StyleSheet, TextInput } from 'react-native';
 
-import {View,Text,Button} from 'native-base';
+import { View, Text, Button } from 'native-base';
+
+
 
 //Components
-import ItemCheckBox from '../../../component/ItemCheckBox';
+import RadioButton from '../../../component/RadioButton';
+import BaseComponent from '../../../component/BaseComponent';
+
 //Style
 import styles from './styles';
 
-class Screen2 extends React.Component{
-    onLogin=()=>{
+class Screen2 extends BaseComponent {
+    state = {
+        key: '',
+    }
+
+    onLogin = () => {
         this.props.navigation.navigate('RegisterScreen3');
     }
-    render(){
-        return(
+
+    onCheck = (text) => {
+        this.setState({ key: text })
+    }
+
+    render() {
+        return (
             <View style={styles.container}>
                 <View style={styles.containerInner}>
-                    <Text title>2. HÌNH THỨC THANH TOÁN CƯỚC PHÍ</Text>
-                    <ItemCheckBox text="Tiền mặt" detail="Nộp trực tiếp cho từng đơn"/>
-                    <ItemCheckBox text="Cấn trừ" detail="trừ cước phí vào tiền COD"/>
-                    <Button onPress={this.onLogin} style={styles.button} login><Text>ĐĂNG NHẬP</Text></Button>
+                    <Text title>2. {this.getString('TITLE_PAYMENT')}</Text>
+                    <RadioButton check={this.state.key} onCheck={this.onCheck} text={this.getString("CASH")} detail={this.getString("CASH_DETAIL")} />
+                    <RadioButton check={this.state.key} onCheck={this.onCheck} text={this.getString("CLEARING")} detail={this.getString("CLEARING_DETAIL")} />
+                    <Button onPress={this.onLogin} style={styles.button} login><Text>{this.getString('CONFIRM')}</Text></Button>
                 </View>
             </View>
         )

@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* rnSpeedLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* rnSpeedLinkTests.m */; };
 		03C7F64F6EAF4C57BC289FAD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 771BEB3CD3A64FB8AE0ECAB6 /* FontAwesome.ttf */; };
@@ -58,6 +57,7 @@
 		F5B7F626851F4616900B2927 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC0B0E1B95CF4F8985BD5AC3 /* EvilIcons.ttf */; };
 		F8A485EA3C8748C79E65B800 /* HelveticaNeue-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF8064C7E9E4CD18E227EB1 /* HelveticaNeue-Medium.ttf */; };
 		FC177B3B8896BF87DBD9C241 /* libPods-rnSpeedLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 990AB3C69A456981B8809FBA /* libPods-rnSpeedLink.a */; };
+		65492B4082E0405C86F17ABB /* HelveticaNeueIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 081F2CFC9B9A4738A84F542B /* HelveticaNeueIt.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +143,7 @@
 		EF2654AFCB0E450BA68EBB6F /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		F066B8274A0CA6007660483F /* Pods-rnSpeedLink-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnSpeedLink-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-rnSpeedLink-tvOSTests/Pods-rnSpeedLink-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F836D92379AB444DBA6D8364 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		081F2CFC9B9A4738A84F542B /* HelveticaNeueIt.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueIt.ttf"; path = "../src/assets/fonts/HelveticaNeueIt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +316,7 @@
 				4EE26DA69BD444D9973F5C87 /* Octicons.ttf */,
 				656302190CE14441B55499A5 /* SimpleLineIcons.ttf */,
 				2D68BFB2534B4401837D5F8C /* Zocial.ttf */,
+				081F2CFC9B9A4738A84F542B /* HelveticaNeueIt.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -499,6 +501,7 @@
 				2734C1CAC728458683A73E88 /* Octicons.ttf in Resources */,
 				243D2C3456EA46E1A592F04D /* SimpleLineIcons.ttf in Resources */,
 				19DFA9A7AE6041AA8CB3C29B /* Zocial.ttf in Resources */,
+				65492B4082E0405C86F17ABB /* HelveticaNeueIt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

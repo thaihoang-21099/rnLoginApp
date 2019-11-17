@@ -1,49 +1,54 @@
 import React from 'react';
 
 import { TextInput } from 'react-native';
-import { View, Text, Picker, Form, Container, Header, Content, Icon } from 'native-base';
+import { View, Text, } from 'native-base';
+
+import Icon from 'react-native-vector-icons/AntDesign';
+
+
 
 class InputField extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected: ""
+            selected: "",
+            open: false,
+            nameIcon: 'caretdown',
         };
     }
-    onValueChange(value: string) {
+
+
+    onPress = () => {
+        const { open } = this.state;
         this.setState({
-            selected: value
-        });
+            open: !this.state.open,
+            nameIcon: open ? 'caretdown' : 'caretup'
+        })
+    }
+
+
+    onChange = (text)=>{
+        const  {onChangeText,name} = this.props;
+        onChangeText(name,text);
     }
     render() {
-        const { text, placeholder, isRequired, temp } = this.props;
+        const { text, placeholder, isRequired, onChangeText, name, isLogin } = this.props;
+
         return (
             <View>
-
                 {placeholder ?
                     <View inputInfo>
                         <Text inputRequired>{`${text}${isRequired ? '(*)' : ''}`}</Text>
-                        <TextInput placeholder={placeholder} placeholderTextColor="#767676"></TextInput>
+                        <TextInput style={{padding:0}} onChangeText={this.onChange}  placeholder={placeholder} placeholderTextColor="#767676"></TextInput>
                     </View>
                     :
-                    <View inputInfo style={{alignItems:'center'}}>
+                    <View inputInfo style={{ alignItems: 'center' }}>
                         <Text inputRequired>{`${text}${isRequired ? '(*)' : ''}`}</Text>
-                        <Form>
-                            <Picker
-                                mode="dropdown"
-                                iosHeader="Chọn thành phố"
-                                iosIcon={<Icon name="arrow-down" />}
-                                headerStyle={{backgroundColor:'red' }}
-                                headerTitleStyle={{color:'black'}}
-                                selectedValue={this.state.selected}
-                                onValueChange={this.onValueChange.bind(this)}
-                            >
-                                <Picker.Item label="HCM" value="key0" />
-                                <Picker.Item label="Đà Nẵng" value="key1" />
-                                <Picker.Item label="Đà Lạt" value="key2" />
-                                <Picker.Item label="Đà đà đa" value="key3" />
-                            </Picker>
-                        </Form>
+                        <Text>{this.state.selected}</Text>
+                        <View  style={{flexDirection:'row'}}>
+                            <Text style={{marginRight:15}}>TP.Ho Chi Minh</Text>
+                            <Icon onPress={this.onPress} name={this.state.nameIcon} />
+                        </View>
                     </View>
                 }
             </View>

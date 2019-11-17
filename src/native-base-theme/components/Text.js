@@ -5,6 +5,10 @@ import Colors from '../Color';
 import Fonts from '../fonts';
 
 export default (variables /* : * */ = variable) => {
+  const check={
+    color:Colors.TEXT_BLUE_STRONG,
+    fontSize:Fonts.Size.regular,
+  };
   const textTheme = {
     fontSize: Fonts.Size.regular,
     fontFamily: Fonts.Type.light,
@@ -14,13 +18,17 @@ export default (variables /* : * */ = variable) => {
       fontSize: variables.noteFontSize,
     },
     '.title':{
-      fontSize:Fonts.Size.medium,
+      fontSize:Fonts.Size.regular,
       color:Colors.TEXT_BLUE_STRONG,
       fontFamily: Fonts.Type.medium,
-      //fontWeight:'700'
     },
-    '.agree':{
-
+    '.checkLight':{
+      ...check,
+      fontFamily: Fonts.Type.light,
+    },
+    '.checkStrong':{
+      ...check,
+      fontFamily: Fonts.Type.medium,
     },
     '.inputRequired':{
       color:Colors.TEXT_BLUE_LIGHT,
@@ -31,7 +39,13 @@ export default (variables /* : * */ = variable) => {
     },
     '.italic':{
       fontStyle:'italic',
-      
+      //fontFamily: Fonts.Type.lightItalic,
+
+      color:'#767676',
+      '.note':{
+        fontSize:13,
+        lineHeight:20
+      }
     }
 
   };

@@ -9,6 +9,15 @@ export default (variables /* : * */ = variable) => {
   const flexRow={
     flexDirection:'row'
   };
+  const containerCommon={
+    flex:1
+  };
+  const centerCommon={
+    ...containerCommon,
+    justifyContent:'center',
+    alignItems:'center'
+  }
+
   const viewTheme = {
     '.padder': {
       padding: variables.contentPadding
@@ -37,7 +46,20 @@ export default (variables /* : * */ = variable) => {
       justifyContent:'space-between',
       borderBottomWidth:Measurements.border.tiny,
       borderBottomColor:Colors.BORDER_GRAY_LIGHT
+    },
+    '.tabnote':{
+      backgroundColor: Colors.BG_GRAY_LIGHT,
+      paddingTop:5,
+      paddingBottom:5,
+      paddingLeft:Measurements.basePadding,
+    },
+    '.center':{
+      ...centerCommon
+    },
+    '.container':{
+      ...containerCommon,
     }
+
   };
 
   return viewTheme;

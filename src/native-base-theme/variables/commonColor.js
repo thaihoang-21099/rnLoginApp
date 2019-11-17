@@ -31,6 +31,7 @@ export default {
   backgroundBlue:"#0028a5",
   backgroundWhite:"#FFF", 
   backgroundGray:"#f7f7f7",
+  backgroundGrayLight:'#eeeeee',
 
 
   //TEXT

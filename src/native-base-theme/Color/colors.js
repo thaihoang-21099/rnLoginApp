@@ -5,6 +5,7 @@ const Colors={
     BG_RED: color.backgroundRed,
     BG_BLUE: color.backgroundBlue,
     BG_GRAY:color.backgroundGray,
+    BG_GRAY_LIGHT:color.backgroundGrayLight,
     TEXT_GRAY_LIGHT:color.textGrayLight,
     TEXT_GRAY_STRONG:color.textGrayStrong,
     TEXT_WHITE:color.textWhite,

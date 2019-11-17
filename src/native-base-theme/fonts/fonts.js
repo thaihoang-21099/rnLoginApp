@@ -1,7 +1,8 @@
 const Type ={
     light:'HelveticaNeue-Light',
     medium:'HelveticaNeue-Medium',
-    strong:'HelveticaNeue-Bold'
+    strong:'HelveticaNeue-Bold',
+    lightItalic:'HelveticaNeueIt',
 }
 const Size={
     tiny:12,

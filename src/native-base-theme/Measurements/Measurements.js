@@ -63,6 +63,7 @@ const Measurements = {
   },
   border:{
     tiny:0.25,
+    small:0.5,
     regular:1
   },
 };

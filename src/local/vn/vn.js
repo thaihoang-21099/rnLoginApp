@@ -1,14 +1,15 @@
 export default{
-	TEXT_LOGIN: 'ĐĂNG NHẬP',
+	LOGIN: 'ĐĂNG NHẬP',
 	PLACEHOLDER_USERNAME:'Nhập số điện thoại/email',
 	PLACEHOLDER_PASSWORD:'Nhập mật khẩu',
-	TEXT_LOGIN_FB:'Login by Facebook',
-	TEXT_LOGIN_GG:'Login by Google',
-	TEXT_FORGOT_PASSWORD:'Forgot password?',
-	TEXT_NO_ACCOUNT:'Bạn chưa có tài khoản?',
-	TEXT_SIGNUP_NOW:'Đăng ký ngay',
+	LOGIN_FB:'Đăng nhập Facebook',
+	LOGIN_GG:'Đăng nhập Google',
+	FORGOT_PASSWORD:'Quên mật khẩu?',
+	NO_ACCOUNT:'Bạn chưa có tài khoản?',
+	SIGNUP_NOW:'Đăng ký ngay',
 	CONFIRM:'XÁC NHẬN',
 	START:'BẮT ĐẦU',
+	BANK_ACCOUNT:'TÀI KHOẢN NGÂN HÀNG',
 	BANK_ACCOUNT_NUMBER:'Số tài khoản',
 	BANK_ACCOUNT_NUMBER_DETAIL:'Số tài khoản ngân hàng',
 	BANK_ACCOUNT_OWNER:'Chủ tài khoản',
@@ -34,6 +35,9 @@ export default{
 	ADDRESS:'Địa chỉ',
 	ADDRESS_DETAIL:'Số nhà/Đường',
 	CITY:'Thành phố/Tỉnh',
+	CHOOSE_CITY:'Chọn Thành phố/Quận',
+
+	////
 	TITLE_PERSONAL_INFO:'THÔNG TIN CÁ NHÂN',
 	TITLE_PAYMENT:'HÌNH THỨC THANH TOÁN CƯỚC PHÍ',
 	TITLE_SERVICE_CONTRACT:'HỢP ĐỒNG DỊCH VỤ',
@@ -47,5 +51,7 @@ export default{
 	CLEARING_DETAIL:'trừ cước phí vào tiền COD',
 	//////
 	UPLOAD_IMAGE_ID:'TẢI ẢNH CMND',
+	UPLOAD_IMAGE_FRONT:'Mặt trước',
+	UPLOAD_IMAGE_BACK:'Mặt sau',
 
 }

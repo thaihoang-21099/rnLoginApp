@@ -35,6 +35,7 @@ export default{
 	ADDRESS:'ADDRESS',
 	ADDRESS_DETAIL:'Home/Street',
 	CITY:'City/Province',
+	CHOOSE_CITY:'choose city/province',
 	TITLE_PERSONAL_INFO:'PERSONAL INFROMATION',
 	TITLE_PAYMENT:'PAYMENTS',
 	TITLE_SERVICE_CONTRACT:'SERVICES CONTRACT',
@@ -47,4 +48,6 @@ export default{
 	CLEARING_DETAIL:'I dont know how to explain',
 	////
 	UPLOAD_IMAGE_ID:'UPLOAD IDENTITY IMAGE',
+	UPLOAD_IMAGE_FRONT:'Front',
+	UPLOAD_IMAGE_BACK:'Back',
 }

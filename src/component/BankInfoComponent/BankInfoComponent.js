@@ -16,36 +16,53 @@ import BaseComponent from '../BaseComponent';
 import styles from './styles';
 
 class RegisterPayScreen extends BaseComponent {
+    state={
+        bankAccountName:'',
+        bankAccountNumber:'',
+        bankName:'',
+        bankBranch:'',
+    }
+
+    inputs={};
+
+    inputs={}
+
+    focusNextField=(id)=>{
+        this.inputs[id].focus();
+    }
+
+    handleRef=(id,input)=>{
+        this.inputs[id]=input
+    }
 
     render() {
-        const { image, screen,onChangeScreen } = this.props;
+        const { isClearing, screen,onChangeScreen, handleRef,id } = this.props;
         return (
             <View>
                 <View tabnote>
                     <Text italic note>
-                        {this.getString('PAY_CASH_NOTE')}
+                        {isClearing?this.getString("PAY_CLEARING_NOTE"):this.getString('PAY_CASH_NOTE')}
                     </Text>
                 </View>
                 <View style={styles.content}>
                     <Text title> {this.getString('BANK_ACCOUNT')}</Text>
-                    <InputField text={this.getString('BANK_ACCOUNT_OWNER')} placeholder={this.getString('BANK_ACCOUNT_OWNER_DETAIL')} />
-                    <InputField text={this.getString('BANK_ACCOUNT_NUMBER')} placeholder={this.getString('BANK_ACCOUNT_OWNER_DETAIL')} />
-                    <InputField text={this.getString('BANK_NAME')} placeholder={this.getString('BANK_NAME_DETAIL')} />
-                    <InputField text={this.getString('BANK_BRANCH')} placeholder={this.getString('BANK_BRANCH_DETAIL')} />
+                    <InputField id={1} handleFocus={this.focusNextField} handleRef={this.handleRef} text={this.getString('BANK_ACCOUNT_OWNER')} placeholder={this.getString('BANK_ACCOUNT_OWNER_DETAIL')} />
+                    <InputField id={2} handleFocus={this.focusNextField} handleRef={this.handleRef} text={this.getString('BANK_ACCOUNT_NUMBER')} placeholder={this.getString('BANK_ACCOUNT_OWNER_DETAIL')} />
+                    <InputField id={3} handleFocus={this.focusNextField} handleRef={this.handleRef} text={this.getString('BANK_NAME')} placeholder={this.getString('BANK_NAME_DETAIL')} />
+                    <InputField id={4} handleFocus={this.focusNextField} handleRef={this.handleRef} text={this.getString('BANK_BRANCH')} placeholder={this.getString('BANK_BRANCH_DETAIL')} />
                     {
-                        image ?
+                        isClearing ?
                             <View style={{ marginTop: 25 }}>
                                 <Text title>{this.getString('UPLOAD_IMAGE_ID')}</Text>
                                 <View style={{ marginTop: 0, flexDirection: 'row', }}>
-                                    <TabUploadImage text="Mat truoc" imageSrc={Images.IMG_CMND_FRONT} />
-                                    <TabUploadImage text="Mat sau" imageSrc={Images.IMG_CMND_BACK} />
+                                    <TabUploadImage text={this.getString("UPLOAD_IMAGE_FRONT")} imageSrc={Images.IMG_CMND_FRONT} />
+                                    <TabUploadImage text={this.getString("UPLOAD_IMAGE_BACK")} imageSrc={Images.IMG_CMND_BACK} />
                                 </View>
                             </View>
                             :
                             null
                     }
                     <Button onPress={()=>onChangeScreen()} style={styles.button} login><Text>{this.getString('CONFIRM')}</Text></Button>
-
                 </View>
             </View>
         )

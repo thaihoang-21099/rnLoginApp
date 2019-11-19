@@ -26,7 +26,8 @@ export default (variables /* : * */ = variable) => {
       //flexDirection: 'row',
       ...flexRow,
       alignItems:'center',
-      padding: Measurements.mediumMargin,
+      padding: 0,
+      paddingHorizontal: Measurements.mediumMargin,
       backgroundColor: Colors.BG_WHITE,
       borderWidth: Measurements.border.tiny,
       borderColor: Colors.BORDER_GRAY,
@@ -43,9 +44,9 @@ export default (variables /* : * */ = variable) => {
       paddingRight:Measurements.basePadding,
       paddingBottom:Measurements.smallPadding,
       marginTop:Measurements.doubleBaseMargin,
-      justifyContent:'space-between',
       borderBottomWidth:Measurements.border.tiny,
-      borderBottomColor:Colors.BORDER_GRAY_LIGHT
+      borderBottomColor:Colors.BORDER_GRAY_LIGHT,
+      alignItems:'center'
     },
     '.tabnote':{
       backgroundColor: Colors.BG_GRAY_LIGHT,

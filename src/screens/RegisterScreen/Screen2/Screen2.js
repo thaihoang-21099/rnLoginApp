@@ -19,7 +19,9 @@ class Screen2 extends BaseComponent {
     }
 
     onLogin = () => {
-        this.props.navigation.navigate('RegisterScreen3');
+        const key = this.state.key;
+        const isClearing = key==this.getString("CLEARING");
+        this.props.navigation.navigate('RegisterScreen3',{isClearing});
     }
 
     onCheck = (text) => {
@@ -27,13 +29,14 @@ class Screen2 extends BaseComponent {
     }
 
     render() {
+        const {key} = this.state;
         return (
             <View style={styles.container}>
                 <View style={styles.containerInner}>
                     <Text title>2. {this.getString('TITLE_PAYMENT')}</Text>
                     <RadioButton check={this.state.key} onCheck={this.onCheck} text={this.getString("CASH")} detail={this.getString("CASH_DETAIL")} />
                     <RadioButton check={this.state.key} onCheck={this.onCheck} text={this.getString("CLEARING")} detail={this.getString("CLEARING_DETAIL")} />
-                    <Button onPress={this.onLogin} style={styles.button} login><Text>{this.getString('CONFIRM')}</Text></Button>
+                    <Button disabled={!key?true:false} onPress={this.onLogin} style={styles.button} login><Text>{this.getString('CONFIRM')}</Text></Button>
                 </View>
             </View>
         )

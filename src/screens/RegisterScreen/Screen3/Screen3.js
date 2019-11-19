@@ -24,7 +24,8 @@ class Screen3 extends BaseComponent {
         this.setState({ checked: !this.state.checked })
     }
     onLogin = () => {
-        this.props.navigation.navigate('RegisterScreen4');
+        const isClearing = this.props.navigation.state.params.isClearing
+        this.props.navigation.navigate('RegisterScreen4',{isClearing});
     }
     render() {
         return (

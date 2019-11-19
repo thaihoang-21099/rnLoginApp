@@ -11,10 +11,10 @@ import styles from './styles'
 class Screen6 extends BaseComponent {
     render() {
         return (
-            <View container>
+            <SafeAreaView style={styles.container}>
                 <Image source={Images.BG_SCREEN6} style={styles.imgBackground} />
                 <Button login><Text>{this.getString('CONFIRM')}</Text></Button>
-            </View>
+            </SafeAreaView>
         )
     }
 }

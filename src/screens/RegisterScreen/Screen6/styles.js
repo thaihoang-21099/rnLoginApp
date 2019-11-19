@@ -1,6 +1,9 @@
 import {StyleSheet} from 'react-native';
 
-const styles ={
+const styles = StyleSheet.create({
+    container:{
+        flex:1
+    },
     button :{
         width:'100%'
     },
@@ -8,6 +11,6 @@ const styles ={
         flex:1,
         width: '100%', 
     }
-}
+});
 
 export default styles

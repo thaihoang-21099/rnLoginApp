@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 5, height: 5 },
         shadowOpacity: 0.5,
         shadowRadius: 5,
+        elevation: 2,
     },
     blockDown: {
         width: '100%',
@@ -47,8 +48,15 @@ const styles = StyleSheet.create({
         marginRight: Measurements.doubleBaseMargin
     },
     iconSocial: {
-        width: Measurements.icons.medium,
-        height: Measurements.icons.medium
+        width: 17.5,
+        height: 17.5,
+        flex: 0,
+        marginLeft: Measurements.doubleBaseMargin
+    },
+    textInput:{
+        padding:0, 
+        height: 50,
+        flex:1,
     }
 
 })

@@ -39,13 +39,15 @@ export default (variables /* : * */ = variable) => {
     },
     '.italic':{
       fontStyle:'italic',
-      //fontFamily: Fonts.Type.lightItalic,
-
       color:'#767676',
       '.note':{
         fontSize:13,
         lineHeight:20
       }
+    },
+    '.list':{
+      color:'black',
+      fontSize:Fonts.Size.medium,
     }
 
   };

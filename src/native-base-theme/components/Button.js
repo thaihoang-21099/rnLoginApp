@@ -95,7 +95,7 @@ export default (variables /* : * */ = variable) => {
     'NativeBase.Text': {
       color: Colors.TEXT_WHITE,
       fontSize: Fonts.Size.medium,
-      fontWeight:'900',
+      fontWeight:'700',
     },
   }
   const buttonTheme = {
@@ -105,6 +105,11 @@ export default (variables /* : * */ = variable) => {
     },
     '.socialLogin':{
       ...loginCommon,
+      'NativeBase.Text': {
+        ...loginCommon['NativeBase.Text'],
+        flex:1,
+        textAlign:'center'
+      },
       borderRadius:35,
       marginBottom:Measurements.mediumMargin
     },

@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import Measurements from '../../native-base-theme/Measurements';
+import Measurements from '../../../native-base-theme/Measurements';
 
 const styles = StyleSheet.create({
     logo:{

@@ -4,12 +4,12 @@ import { StyleSheet, TextInput, Image } from 'react-native';
 
 import { View, Text, Button } from 'native-base';
 
-import Images from '../../assets';
+import Images from '../../../assets';
 
 //Components
-import InputField from '../InputField';
-import TabUploadImage from '../TabUploadImage';
-import BaseComponent from '../BaseComponent';
+import InputField from '../../common/InputField';
+import TabUploadImage from '../../common/TabUploadImage';
+import BaseComponent from '../../BaseComponent';
 
 
 //Style
@@ -23,11 +23,12 @@ class RegisterPayScreen extends BaseComponent {
         bankBranch:'',
     }
 
+    totalInput=4;
+
     inputs={};
 
-    inputs={}
-
     focusNextField=(id)=>{
+        if(id<=this.totalInput)
         this.inputs[id].focus();
     }
 
@@ -49,7 +50,7 @@ class RegisterPayScreen extends BaseComponent {
                     <InputField id={1} handleFocus={this.focusNextField} handleRef={this.handleRef} text={this.getString('BANK_ACCOUNT_OWNER')} placeholder={this.getString('BANK_ACCOUNT_OWNER_DETAIL')} />
                     <InputField id={2} handleFocus={this.focusNextField} handleRef={this.handleRef} text={this.getString('BANK_ACCOUNT_NUMBER')} placeholder={this.getString('BANK_ACCOUNT_OWNER_DETAIL')} />
                     <InputField id={3} handleFocus={this.focusNextField} handleRef={this.handleRef} text={this.getString('BANK_NAME')} placeholder={this.getString('BANK_NAME_DETAIL')} />
-                    <InputField id={4} handleFocus={this.focusNextField} handleRef={this.handleRef} text={this.getString('BANK_BRANCH')} placeholder={this.getString('BANK_BRANCH_DETAIL')} />
+                    <InputField last id={4} handleFocus={this.focusNextField} handleRef={this.handleRef} text={this.getString('BANK_BRANCH')} placeholder={this.getString('BANK_BRANCH_DETAIL')} />
                     {
                         isClearing ?
                             <View style={{ marginTop: 25 }}>

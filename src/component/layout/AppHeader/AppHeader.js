@@ -4,7 +4,7 @@ import { SafeAreaView, StyleSheet, StatusBar, Platform, TouchableOpacity } from 
 import { View, Text } from 'native-base';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 
-import Colors from '../../../native-base-theme/Color';
+import Colors from '../../../native-base-theme/Colors';
 
 
 

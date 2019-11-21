@@ -3,7 +3,7 @@ import React from 'react';
 import { TextInput, TouchableOpacity } from 'react-native';
 import { View, Text, } from 'native-base';
 
-import BaseComponent from '../BaseComponent';
+import BaseComponent from '../../BaseComponent';
 
 import Icon from 'react-native-vector-icons/AntDesign';
 
@@ -36,7 +36,7 @@ class InputField extends BaseComponent {
         }
     }
     render() {
-        const { text, placeholder, isRequired, onChangeText, name, onSelect,locationString, handleFocus,id, handleRef } = this.props;
+        const { text, placeholder, isRequired, onChangeText, name, onSelect,locationString, handleFocus,id, handleRef,last } = this.props;
         return (
             <View>
                 {placeholder ?
@@ -44,14 +44,14 @@ class InputField extends BaseComponent {
                         <Text style={styles.label} inputRequired>{`${text}${isRequired ? '(*)' : ''}`}</Text>
                         <TextInput 
                             style={styles.textInput} 
-                            blurOnSubmit={true}
+                            blurOnSubmit={last?true:false}
                             onChangeText={this.onChange} 
                             placeholder={placeholder} 
                             placeholderTextColor="#767676" 
                             returnKeyType="next"
                             onSubmitEditing={()=>{
-                                if(!handleFocus) return
-                                if(id<5){handleFocus(id+1)}}
+                                //if(!handleFocus) return
+                                handleFocus(id+1)}
                             }
                             ref={input=>{
                                 if(handleRef) handleRef(id,input)

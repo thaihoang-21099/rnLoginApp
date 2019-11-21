@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
-import Measurements from '../../native-base-theme/Measurements';
-import Colors from '../../native-base-theme/Color'
+import Measurements from '../../../native-base-theme/Measurements';
+import Colors from '../../../native-base-theme/Colors'
 
 
 const styles = StyleSheet.create({

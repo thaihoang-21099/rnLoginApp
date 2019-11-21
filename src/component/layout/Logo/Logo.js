@@ -1,7 +1,7 @@
 import React from 'react';
-import {Image,Text,Animated,View} from 'react-native';
+import {Image,Animated,View} from 'react-native';
 
-import Images from '../../assets';
+import Images from '../../../assets';
 
 import styles from './styles';
 

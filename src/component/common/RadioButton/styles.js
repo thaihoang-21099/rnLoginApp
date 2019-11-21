@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
-import Measurements from '../../native-base-theme/Measurements';
+import Measurements from '../../../native-base-theme/Measurements';
 const { icons, baseMargin, doubleBaseMargin } = Measurements;
-import Colors from '../../native-base-theme/Color';
+import Colors from '../../../native-base-theme/Colors';
 
 
 

@@ -2,9 +2,13 @@ import React from 'react';
 
 import {Image,View,Animated,Text} from 'react-native';
 
+import { StackActions, NavigationActions } from 'react-navigation';
+
+
+
 import Images from '../../assets';
 
-import Logo from '../../component/Logo'
+import Logo from '../../component/layout/Logo'
 
 import styles from './styles';
 
@@ -13,7 +17,6 @@ class SplashScreen extends React.Component{
         super();
         this.state={
             logoMargin:new Animated.Value(-300)
-
         }
     }
 
@@ -23,7 +26,10 @@ class SplashScreen extends React.Component{
                 toValue:-200,
                 duration:500
             }),
-        ]).start(()=>this.props.navigation.navigate('LoginScreen'));
+        ]).start(()=>{
+            
+            this.props.navigation.navigate('LoginScreen')
+        });
     }
 
     render(){

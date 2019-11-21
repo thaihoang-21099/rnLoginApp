@@ -4,18 +4,12 @@ import { SafeAreaView } from 'react-native';
 import { View, Text, Button } from 'native-base';
 
 
-import LocationComponent from '../../../component/LocationComponent';
+import LocationComponent from '../../../component/layout/LocationComponent';
 
 
 export default class WardScreen extends React.Component {
     static navigationOptions = {
         title: 'Quận'
-    }
-
-    constructor() {
-        super();
-        this.state = {
-        }
     }
 
     setSelect = (ward) => {

@@ -1,5 +1,5 @@
 import Measurements from '../../native-base-theme/Measurements';
-import Colors from '../../native-base-theme/Color';
+import Colors from '../../native-base-theme/Colors';
 import { StyleSheet } from 'react-native';
 
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
@@ -12,9 +13,14 @@ import DistrictScreen from '../screens/AddressScreen/DistrictScreen';
 import WardScreen from '../screens/AddressScreen/WardScreen';
 
 
+import AppHeader from '../component/layout/AppHeader';
 
-import Colors from '../native-base-theme/Color';
-import I18n from '../local';
+
+
+import Colors from '../native-base-theme/Colors';
+import I18n from '../locale';
+
+const TITLE_SERVICE_REGISTER = I18n.t('TITLE_SERVICE_REGISTER');
 
 const RegisterNavigator = createStackNavigator({
     RegisterScreen1: {
@@ -46,17 +52,13 @@ const RegisterNavigator = createStackNavigator({
         screen: RegisterScreen6,
     },
 },{
-    defaultNavigationOptions:{
-        title: I18n.t('TITLE_SERVICE_REGISTER'),
-        headerStyle: {
-            backgroundColor: Colors.BG_RED,
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-        fontWeight: 'bold',
-        },
-        headerBackTitle:null
-    }
+    defaultNavigationOptions:({ navigation,screenProps })=>({
+
+         header:<AppHeader 
+                    onPressBack={()=>navigation.pop()}
+                    title={TITLE_SERVICE_REGISTER}
+                    />
+    })
 })
 
 export default RegisterNavigator;

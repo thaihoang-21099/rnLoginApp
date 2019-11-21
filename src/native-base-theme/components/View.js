@@ -1,9 +1,9 @@
 // @flow
 
 import variable from './../variables/platform';
-import Colors from '../Color';
+import Colors from '../Colors';
 import Measurements from '../Measurements';
-import Fonts from '../fonts';
+import Fonts from '../Fonts';
 
 export default (variables /* : * */ = variable) => {
   const flexRow={

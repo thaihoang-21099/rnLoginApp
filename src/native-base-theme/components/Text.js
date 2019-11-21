@@ -1,8 +1,8 @@
 // @flow
 
 import variable from './../variables/platform';
-import Colors from '../Color';
-import Fonts from '../fonts';
+import Colors from '../Colors';
+import Fonts from '../Fonts';
 
 export default (variables /* : * */ = variable) => {
   const check={
@@ -20,6 +20,11 @@ export default (variables /* : * */ = variable) => {
     '.title':{
       fontSize:Fonts.Size.regular,
       color:Colors.TEXT_BLUE_STRONG,
+      fontFamily: Fonts.Type.medium,
+    },
+    '.titleHeader':{
+      fontSize:Fonts.Size.medium,
+      color:Colors.TEXT_WHITE,
       fontFamily: Fonts.Type.medium,
     },
     '.checkLight':{

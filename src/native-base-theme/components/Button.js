@@ -2,8 +2,8 @@
 
 import variable from './../variables/platform';
 import { PLATFORM } from './../variables/commonColor';
-import Colors from '../Color';
-import Fonts from '../fonts';
+import Colors from '../Colors';
+import Fonts from '../Fonts';
 import Measurements from '../Measurements'
 
 

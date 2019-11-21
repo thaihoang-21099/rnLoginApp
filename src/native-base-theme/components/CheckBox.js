@@ -1,7 +1,7 @@
 // @flow
 
 import variable from './../variables/platform';
-import Colors from '../Color'
+import Colors from '../Colors'
 
 export default (variables /* : * */ = variable) => {
   const checkBoxTheme = {

@@ -9,7 +9,7 @@ import { View, Text, Button } from 'native-base';
 import { SafeAreView } from 'react-native';
 
 //Components
-import RadioButton from '../../../component/RadioButton';
+import RadioButton from '../../../component/common/RadioButton';
 import BaseComponent from '../../../component/BaseComponent';
 
 

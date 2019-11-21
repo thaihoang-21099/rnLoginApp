@@ -1,3 +1,4 @@
+import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
@@ -11,20 +12,23 @@ import LoginScreen from '../screens/LoginScreen';
 
 import RegisterNavigator from './RegisterNavigator';
 
-import Colors from '../native-base-theme/Color';
+import Colors from '../native-base-theme/Colors';
 
 const AppNavigator = createStackNavigator({
     SplashScreen: {
         screen: SplashScreen,
 
+
     },
     LoginScreen: {
         screen: LoginScreen,
+        navigationOptions:{
+            gesturesEnabled: false,
+        }
 
     },
     RegisterScreen: {
         screen: RegisterNavigator,
-
     },
 
 },{

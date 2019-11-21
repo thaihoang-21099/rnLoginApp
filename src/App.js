@@ -18,3 +18,4 @@ import AppNavigator from './navigation';
 }
 
 export default App
+

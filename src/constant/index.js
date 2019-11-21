@@ -15,38 +15,38 @@ export const city =[
                         id:2,
                         name:'Bến Thành'
                     },
-                    // {
-                    //     id:3,
-                    //     name:'Cô Giang'
-                    // },
-                    // {
-                    //     id:4,
-                    //     name:'Cầu Kho'
-                    // },
-                    // {
-                    //     id:5,
-                    //     name:'Cầu Ông Lãnh'
-                    // },
-                    // {
-                    //     id:6,
-                    //     name:'Đa Kao'
-                    // },
-                    // {
-                    //     id:7,
-                    //     name:'Nguyễn Thái Bình'
-                    // },
-                    // {
-                    //     id:8,
-                    //     name:'Nguyễn Cư Trinh'
-                    // },
-                    // {
-                    //     id:9,
-                    //     name:'Phạm Ngũ Lão'
-                    // },
-                    // {
-                    //     id:10,
-                    //     name:'Tân Định'
-                    // },
+                    {
+                        id:3,
+                        name:'Cô Giang'
+                    },
+                    {
+                        id:4,
+                        name:'Cầu Kho'
+                    },
+                    {
+                        id:5,
+                        name:'Cầu Ông Lãnh'
+                    },
+                    {
+                        id:6,
+                        name:'Đa Kao'
+                    },
+                    {
+                        id:7,
+                        name:'Nguyễn Thái Bình'
+                    },
+                    {
+                        id:8,
+                        name:'Nguyễn Cư Trinh'
+                    },
+                    {
+                        id:9,
+                        name:'Nguyễn Lung Tung'
+                    },
+                    {
+                        id:10,
+                        name:'Tân Định'
+                    },
                 ]
             },
             {id:2,name:'Quận 2'},

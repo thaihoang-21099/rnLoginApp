@@ -23,7 +23,7 @@ const AppNavigator = createStackNavigator({
     LoginScreen: {
         screen: LoginScreen,
         navigationOptions:{
-            header:null
+            // header:null
         }
     },
     RegisterScreen: {
@@ -37,7 +37,7 @@ const AppNavigator = createStackNavigator({
     }
 },{
     defaultNavigationOptions:{
-        header: null
+        header: <View/>
     }
 })
 

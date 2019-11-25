@@ -18,7 +18,7 @@ const BOOKING = createStackNavigator({
     BookingScreen,
 }, {
     defaultNavigationOptions: {
-        header: null
+        header: <AppHeader/>
     }
 })
 

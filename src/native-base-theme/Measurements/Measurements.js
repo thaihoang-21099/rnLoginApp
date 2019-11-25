@@ -66,6 +66,7 @@ const Measurements = {
     small:0.5,
     regular:1
   },
+
 };
 
 export default Measurements;

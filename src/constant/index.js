@@ -88,5 +88,35 @@ export const city =[
             {id:8,name:'Quận Hoàng Sa Island'},
         ]
     }
-]
+];
+
+export const booking =[
+    {
+        id:'MDH0123456',
+        nameCus:'De Vich Hoang',
+        address:'23 Binh Loi Street, Ward 13, Binh Thanh District, Ho Chi Minh',
+        phone:'0967633192',
+        total:150000,
+        incurredFee:10000,
+        deliveryFee:5000,
+    },
+    {
+        id:'MDH0123457',
+        nameCus:'DaVich Hoang',
+        address:'Ki tuc xa khu A, phuong Linh trung, TP.HCM',
+        phone:'0967633192',
+        total:170000,
+        incurredFee:90000,
+        deliveryFee:5000,
+    },
+    {
+        id:'MDH0123458',
+        nameCus:'DAvid Copperfield',
+        address:'Tp Ha Noi, Tran duy hung, quan 1',
+        phone:'0967633192',
+        total:190000,
+        incurredFee:20000,
+        deliveryFee:5000,
+    }
+];
     

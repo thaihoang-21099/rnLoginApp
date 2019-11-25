@@ -22,8 +22,8 @@ class Screen6 extends BaseComponent {
     }
 
     _onPress=()=>{
-        this._handleResetStackAction();
-        this.props.navigation.navigate('LoginScreen')
+        this.props.navigation.navigate('MainScreen')
+        //this._handleResetStackAction();
     }
 
     render() {

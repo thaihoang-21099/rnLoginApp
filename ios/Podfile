@@ -43,21 +43,5 @@ target 'rnSpeedLink' do
   pod 'react-native-webview', :path => '../node_modules/react-native-webview'
 
   pod 'react-native-viewpager', :path => '../node_modules/@react-native-community/viewpager'
-
-  target 'rnSpeedLinkTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
   use_native_modules!
-end
-
-target 'rnSpeedLink-tvOS' do
-  # Pods for rnSpeedLink-tvOS
-
-  target 'rnSpeedLink-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end

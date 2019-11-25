@@ -1,18 +1,21 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, StatusBar, Platform, TouchableOpacity } from 'react-native';
+import { SafeAreaView, StyleSheet, StatusBar, Platform, TouchableOpacity, Platform } from 'react-native';
 
 import { View, Text } from 'native-base';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 
 import Colors from '../../../native-base-theme/Colors';
 
+import { getStatusBarHeight, isIphoneX } from 'react-native-iphone-x-helper';
 
+const HEIGHT_SAFE_STATUS_BAR = Platform.OS === 'ios' ? getStatusBarHeight(true) : 0;
 
 class AppHeader extends React.Component {
     render() {
         const { title, onPressBack, rightMenu } = this.props;
         return (
-            <SafeAreaView style={{ flex: 0, backgroundColor: Colors.BG_RED }}>
+            <View>
+                <View style={{ width: '100%', height: HEIGHT_SAFE_STATUS_BAR, backgroundColor: Colors.BG_RED }} />
                 <View style={styles.container}>
                     <StatusBar backgroundColor={Colors.BG_RED} barStyle="light-content" />
                     <View style={styles.center}>
@@ -30,7 +33,7 @@ class AppHeader extends React.Component {
                         {rightMenu}
                     </View>
                 </View>
-            </SafeAreaView>
+            </View>
         )
     }
 }

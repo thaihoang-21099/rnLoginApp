@@ -16,13 +16,16 @@ class AppHeader extends React.Component {
                 <View style={styles.container}>
                     <StatusBar backgroundColor={Colors.BG_RED} barStyle="light-content" />
                     <View style={styles.center}>
-                        <Text  numberOfLines={1} titleHeader style={styles.text}>{title?title:'Register'}</Text>
+                        <Text numberOfLines={1} titleHeader style={styles.text}>{title ? title : 'Register'}</Text>
                     </View>
-                    <View style={styles.left}>
-                        <TouchableOpacity style={{flex: 1, padding: 5}} onPress={() => onPressBack()}>
-                            <Ionicon name='ios-arrow-back' color='white' size={30} />
-                        </TouchableOpacity>
-                    </View>
+                    {
+                        onPressBack && <View style={styles.left}>
+                            <TouchableOpacity style={{ flex: 1, padding: 5 }} onPress={() => onPressBack()}>
+                                <Ionicon name='ios-arrow-back' color='white' size={30} />
+                            </TouchableOpacity>
+                        </View>
+                    }
+
                     <View style={styles.right}>
                         {rightMenu}
                     </View>
@@ -56,16 +59,16 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         position: 'absolute',
-        left:0,
-        top:0,
-        right:0,
+        left: 0,
+        top: 0,
+        right: 0,
         bottom: 0,
         justifyContent: 'center',
         paddingHorizontal: 45
     },
     text: {
 
-        
+
     }
 })
 export default AppHeader;

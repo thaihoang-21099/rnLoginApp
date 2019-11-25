@@ -3,6 +3,7 @@ import {SafeAreaView} from 'react-native';
 import { Container, Content, Text, StyleProvider } from 'native-base';
 import getTheme from './native-base-theme/components';
 import material from './native-base-theme/variables/material';
+import { Provider as PaperProvider } from 'react-native-paper';
 
 
 import AppNavigator from './navigation';
@@ -11,7 +12,7 @@ import AppNavigator from './navigation';
   render(){
     return(
       <StyleProvider style={getTheme(material)}>
-        <AppNavigator/>
+         <AppNavigator/>
       </StyleProvider>
     )
   }

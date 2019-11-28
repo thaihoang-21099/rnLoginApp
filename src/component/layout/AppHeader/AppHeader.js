@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, StatusBar, Platform, TouchableOpacity, Platform } from 'react-native';
+import { SafeAreaView, StyleSheet, StatusBar, Platform, TouchableOpacity } from 'react-native';
 
 import { View, Text } from 'native-base';
 import Ionicon from 'react-native-vector-icons/Ionicons';

@@ -277,7 +277,7 @@
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 77U2FKL2Y4;
+						DevelopmentTeam = H463F94B57;
 					};
 				};
 			};
@@ -490,11 +490,11 @@
 				CODE_SIGN_ENTITLEMENTS = rnSpeedLink/rnSpeedLink.entitlements;
 				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				"CODE_SIGN_STYLE[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 77U2FKL2Y4;
+				DEVELOPMENT_TEAM = H463F94B57;
 				INFOPLIST_FILE = rnSpeedLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -502,7 +502,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shop.vn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.rnSpeedLink;
 				PRODUCT_NAME = rnSpeedLink;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"TEST_HOST[sdk=*]" = "";
@@ -518,10 +518,10 @@
 				CODE_SIGN_ENTITLEMENTS = rnSpeedLink/rnSpeedLink.entitlements;
 				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				"CODE_SIGN_STYLE[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 77U2FKL2Y4;
+				DEVELOPMENT_TEAM = H463F94B57;
 				INFOPLIST_FILE = rnSpeedLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -529,7 +529,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shop.vn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.rnSpeedLink;
 				PRODUCT_NAME = rnSpeedLink;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"TEST_HOST[sdk=*]" = "";

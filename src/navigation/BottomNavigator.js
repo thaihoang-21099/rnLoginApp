@@ -1,5 +1,6 @@
 import React from 'react'
-import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
+import { createMaterialBottomTabNavigator } from 'react-navigation-tabs';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
 import { createStackNavigator } from 'react-navigation-stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -18,8 +19,12 @@ const BOOKING = createStackNavigator({
     BookingScreen,
 }, {
     defaultNavigationOptions: {
-        header: <AppHeader/>
+        header: <AppHeader title="Booking man"/>
     }
+})
+
+const MENU = createStackNavigator({
+    MenuScreen
 })
 
 
@@ -38,11 +43,10 @@ const routeConfig = {
         }),
     },
     SOA: { screen: SOAScreen },
-    MENU: { screen: MenuScreen }
+    MENU
 }
 
 const routeStyleConfig = {
-    tabBarPosition: 'bottom',
     tabBarOptions: {
         indicatorStyle: {
             height: '100%',
@@ -88,7 +92,7 @@ const routeStyleConfig = {
 
 
 
-const BottomNavigator = createMaterialTopTabNavigator(
+const BottomNavigator = createBottomTabNavigator(
     routeConfig
     , routeStyleConfig
 )

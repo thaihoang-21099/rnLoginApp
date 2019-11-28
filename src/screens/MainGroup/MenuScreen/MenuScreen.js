@@ -1,17 +1,84 @@
 import React from 'react';
 
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 
+import EntypoIcon from 'react-native-vector-icons/Entypo';
+
+import AppHeader from '../../../component/layout/AppHeader';
+
+import Images from '../../../assets';
 class MenuScreen extends React.Component {
+    static navigationOptions = {
+        header:<AppHeader title="Menu"/>
+    }
+
+    _renderMenuItem=(nameIcon,label,onPress)=>{
+        return(
+            <TouchableOpacity style={styles.item}>
+                <Image source={nameIcon} style={{width:30,height:30}} resizeMode="contain"/>
+                <Text style={{fontSize:14,paddingLeft:20, fontWeight:'200'}}>{label}</Text>
+            </TouchableOpacity>
+        )
+    }
 
     render() {
         return (
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text>Menu Screen</Text>
+            <View style={styles.container}>
+                <View style={styles.top}>
+                    <View style={styles.info}>
+                        <Image style={{width:75,height:75,borderRadius:50,marginRight:20}} source={Images.IMG_CMND_BACK}/>
+                        <View>
+                            <Text>Stella String</Text>
+                            <Text>012345+6799</Text>
+                        </View>
+                    </View>
+                    <EntypoIcon name="chevron-thin-right" size={30} color="#ededed"/>
+                </View>
+                <View style={styles.menu}>
+                    {this._renderMenuItem(Images.ICON_CALCULATOR,'Tra phi')}
+                    {this._renderMenuItem(Images.ICON_HEADPHONE,'Ho tro')}
+                    {this._renderMenuItem(Images.ICON_ABOUT,'Gioi thieu')}
+                    {this._renderMenuItem(Images.ICON_ADDRESS_BOOK,'So dia chi')}
+                    {this._renderMenuItem(Images.ICON_SETTING,'Cai dat')}
+                    {this._renderMenuItem(Images.ICON_LOGOUT,'Dang xuat')}
+                </View>
             </View>
         )
     }
 }
 
-export default MenuScreen;
+const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        backgroundColor:'#f1f1f1',
+    },
+    top:{
+        backgroundColor:'#fff',
+        marginTop:20,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-between',
+        paddingLeft:20,
+        paddingRight:15,
+        paddingVertical:15
+    },
+    info:{
+        flexDirection:'row',
+        alignItems:'center',
+    },
+    menu:{
+        backgroundColor:'#FFF',
+        marginTop:15
+    },
+    item:{
+        flexDirection:'row',
+        paddingVertical:10,
+        alignItems:'center',
+        borderBottomWidth:0.5,
+        borderBottomColor:'#eeeeee',
+        paddingLeft:20
+    }
+})
+
+export default MenuScreen

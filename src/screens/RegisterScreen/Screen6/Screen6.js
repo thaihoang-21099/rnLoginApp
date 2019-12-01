@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView, Image } from 'react-native';
 import { View, Text, Button } from 'native-base';
 
-import { StackActions, NavigationActions } from 'react-navigation';
+import {hanldeResetStackAction} from '../../../helper';
 
 import BaseComponent from '../../../component/BaseComponent';
 
@@ -12,18 +12,9 @@ import styles from './styles'
 
 class Screen6 extends BaseComponent {
 
-    _handleResetStackAction=()=>{
-        const resetAction = StackActions.reset({
-            index: 0,
-            key: null,
-            actions: [NavigationActions.navigate({routeName: 'SplashScreen'})],
-          });
-          this.props.navigation.dispatch(resetAction);
-    }
 
     _onPress=()=>{
-        this.props.navigation.navigate('MainScreen')
-        //this._handleResetStackAction();
+        hanldeResetStackAction(this.props.navigation,'SplashScreen');
     }
 
     render() {

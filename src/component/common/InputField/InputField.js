@@ -10,24 +10,6 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import styles from './styles';
 
 class InputField extends BaseComponent {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selected: "",
-            open: false,
-            nameIcon: 'caretdown',
-        };
-    }
-
-
-    onPress = () => {
-        const { open } = this.state;
-        this.setState({
-            open: !this.state.open,
-            nameIcon: open ? 'caretdown' : 'caretup'
-        })
-    }
-
 
     onChange = (text) => {
         const { onChangeText, name } = this.props;
@@ -44,13 +26,12 @@ class InputField extends BaseComponent {
                         <Text style={styles.label} inputRequired>{`${text}${isRequired ? '(*)' : ''}`}</Text>
                         <TextInput 
                             style={styles.textInput} 
-                            blurOnSubmit={last?true:false}
+                            blurOnSubmit={last}
                             onChangeText={this.onChange} 
                             placeholder={placeholder} 
                             placeholderTextColor="#767676" 
                             returnKeyType="next"
                             onSubmitEditing={()=>{
-                                //if(!handleFocus) return
                                 handleFocus(id+1)}
                             }
                             ref={input=>{
@@ -64,7 +45,7 @@ class InputField extends BaseComponent {
                         <TouchableOpacity style={[styles.textInput,{alignItems:'flex-end'}]} onPress={() => onSelect()}>
                             <View style={{ flexDirection: 'row', }}>
                                 <Text style={{ marginRight: 15 }}>{locationString?locationString:this.getString('CHOOSE_CITY')}</Text>
-                                <Icon onPress={this.onPress} name={this.state.nameIcon} />
+                                <Icon onPress={this.onPress} name='caretdown' />
                             </View>
                         </TouchableOpacity>
 

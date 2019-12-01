@@ -12,18 +12,20 @@ import LoginScreen from '../screens/LoginScreen';
 
 import RegisterNavigator from './RegisterNavigator';
 
+import AccountInfoScreen from '../screens/AccountInfoGroup/AccountInfoScreen';
+
 
 import BottomNavigator from './BottomNavigator';
 
 
 const AppNavigator = createStackNavigator({
     SplashScreen: {
-        screen: SplashScreen,
+        screen: AccountInfoScreen,
     },
     LoginScreen: {
         screen: LoginScreen,
         navigationOptions:{
-            // header:null
+            gesturesEnabled: false,
         }
     },
     RegisterScreen: {

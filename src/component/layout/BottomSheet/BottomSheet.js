@@ -42,34 +42,6 @@ const DefaultTabBar = createReactClass({
 
 
 
-
 export default DefaultTabBar;
 
 
-
-
-
-
-
-// class BottomSheetComponent extends React.Component {
-//     render() {
-//         const {onGetFromLib,onTakeShot} = this.props;
-//         return(
-//         <View>
-//             {BottomSheet.showBottomSheetWithOptions({
-//                 options: ['Chọn ảnh từ thư viên', 'Chụp ảnh', 'Huỷ'],
-//                 dark: true,
-//                 cancelButtonIndex: 2,
-//             }, (value) => {
-//                 switch(value){
-//                     case 0: {onGetFromLib();return}
-//                     case 1: {onTakeShot();return};
-//                 }
-//             })}
-//         </View>
-//         )
-
-//     }
-// }
-
-//export default BottomSheetComponent;

@@ -53,7 +53,16 @@ export default (variables /* : * */ = variable) => {
     '.list':{
       color:'black',
       fontSize:Fonts.Size.medium,
-    }
+    },
+    '.black':{
+      color:Colors.TEXT_BLACK,
+      fontSize:Fonts.Size.smallInput,
+      fontFamily:Fonts.Type.medium
+     },
+     '.blackLight':{
+      color:Colors.TEXT_BLACK,
+      fontSize:Fonts.Size.smallInput,
+     }
 
   };
 
